@@ -84,12 +84,14 @@ body {
   justify-content: space-between;
   font-size: 15px;
   font-weight: 700;
+  color: var(--White)
 }
 .contenedor-main {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
   gap: 24px;
+  cursor: pointer;
 }
 #up {
   color: var(--Lime-Green);
@@ -110,6 +112,7 @@ body {
   align-items: center;
   gap: 17px;
   border-radius: 7px;
+  
 }
 .contenedor-main :hover {
   background: var(--Dark-Grayish-blue);
@@ -125,8 +128,10 @@ body {
   border-top: solid 4px hsl(210, 78%, 56%);
 }
 #gradi {
-  border-top: solid 4px var(--tt);
+    border-top: 4px solid;
+    border-image: linear-gradient( 90deg, rgba(252, 176, 69, 1) 0%, rgba(149, 50, 125, 1)) 1;
 }
+
 #rojo {
   border-top: solid 4px hsl(347deg 91% 33%);
 }
@@ -189,6 +194,10 @@ body {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+  cursor: pointer;
+}
+.contenedor-mediano:hover {
+    background: var(--Dark-Grayish-blue);
 }
 .contenedor-mediano img {
   width: 20px;
@@ -228,6 +237,7 @@ body {
   width: 9px;
   margin: 0 4px;
 }
+
 @media only screen and (min-width: 768px) {
   .nav-bar {
     width: 78%;
@@ -236,16 +246,27 @@ body {
     margin: 18px auto 0 auto;
     justify-content: center;
   }
+  .bar-dark{
+    gap: 13px;
+    justify-content: flex-end;
+  }
   .contenedor-main {
     flex-wrap: nowrap;
     width: 77%;
     margin: 0 auto;
   }
+  .contenedor-main {
+    display: flex;
+    gap: 24px;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
   .contenedorPrincipal {
     min-width: 225px;
     width: 18vw;
     max-width: 356px;
     height: 15vw;
+    min-height: 243px;
     display: flex;
     border-radius: 5px;
   }
@@ -270,6 +291,13 @@ body {
     border-radius: 5px;
   }
 }
+@media only screen and (min-width: 868px) {
+    .contenedor-main {
+        flex-wrap: nowrap;
+        width: 77%;
+        margin: 0 auto;
+      }
+    }
 .switch {
   display: block;
   width: 49px;
